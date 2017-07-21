@@ -1,0 +1,30 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	color: $gray-base;
+	font-family: 'Roboto', Helvetica-neue, Helvetica, Arial, sans-serif, Times-new-roman;
+}
+
+p{
+	font-size: 15px;
+	line-height: 1.6em;
+}
+
+.container{
+	max-width: $container-width;
+	margin: 0 auto;
+	display: block;
+}
+
+.row{
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: $mobile){
+	.container{
+		padding: 0 20px;
+	}
+}
