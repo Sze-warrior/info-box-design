@@ -8,46 +8,78 @@
 }
 
 .info-box-header{
-	font-size: 24px;
+	font-size: 22px;
 	margin-top: 0;
 	margin-bottom: $padding-default/2;
 }
 
 .info-box-message{
 	p{
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 15px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 }
 
-.close-icon{
+.close-icon-container{
 	position: absolute;
-    right: 20px;
-    top: 17px;
-    height: 20px;
-    padding: 5px;
-    border: 1px solid red;
-    border-radius: 50%;
-    
-    &:hover{
+    right: 30px;
+    top: 22px;
+    @include transition(0.2s);
+    border-bottom: 0px solid transparent;
+    padding-bottom: 2px;
+    padding-right: 5px;
 
-    	 border: 1px solid blue;
-		cursor: pointer;
+    &:hover, 
+    &:focus,
+    &:active {
+		@include transition(0.2s);
+		border-bottom: 2px solid red;
+    	outline: none;
+    	cursor: pointer;
+    	padding-bottom: 0;
 
-		.cross-1, .cross-2{
-			background-color: red;
-			cursor: pointer;
-		}    	
+		.close-text{
+			color: red;
+		}
+
+		.close-icon{
+			padding-bottom: 0;
+
+			.cross-1, .cross-2{
+				background-color: red;
+			}
+		}
     }
+}
+
+.close-text{
+	float: left;
+    font-size: 13px;
+    padding-top: 2px;
+    font-weight: 300;
+   	@include transition(0.2s);
+}
+
+.close-icon{
+    height: 15px;
+    padding: 5px;
+    float: left;
+	@include transition(0.2s);
 
 	.cross-1, .cross-2{
-		width: 20px;
+	    @include transition(0.2s);
+		width: 15px;
 		height: 1px;
 		background-color: black;
 	}
 
 	.cross-1{
 	  	@include rotate(45deg);
-	  	margin-top: 10px;
+	  	margin-top: 4px;
 	}
 
 	.cross-2{
@@ -58,10 +90,15 @@
 
 @media screen and (max-width: $mobile){
 	.info-box-container{
-		padding: 60px 20px 30px;
+		padding: 60px 15px 30px;
 	}
 
 	.info-box-header{
 		text-align: center;
-	}	
+	}
+
+	.close-icon-container{
+		top: 20px;
+		right: 15px;
+	}		
 }
