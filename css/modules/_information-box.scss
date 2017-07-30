@@ -37,7 +37,7 @@
     &:focus,
     &:active {
 		@include transition(0.2s);
-		border-bottom: 2px solid red;
+		border-bottom: 1px solid red;
     	outline: none;
     	cursor: pointer;
     	padding-bottom: 0;
@@ -57,7 +57,6 @@
 }
 
 .close-text{
-	float: left;
     font-size: 13px;
     padding-top: 2px;
     font-weight: 300;
@@ -86,6 +85,10 @@
 	  	@include rotate(-45deg);
 	  	margin-top: -1px;	
 	}
+}
+
+.hide{
+	display: none;
 }
 
 @media screen and (max-width: $mobile){

@@ -61,7 +61,7 @@ p {
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  border-bottom: 2px solid red;
+  border-bottom: 1px solid red;
   outline: none;
   cursor: pointer;
   padding-bottom: 0; }
@@ -76,7 +76,6 @@ p {
   background-color: red; }
 
 .close-text {
-  float: left;
   font-size: 13px;
   padding-top: 2px;
   font-weight: 300;
@@ -118,6 +117,9 @@ p {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin-top: -1px; }
+
+.hide {
+  display: none; }
 
 @media screen and (max-width: 767px) {
   .info-box-container {
