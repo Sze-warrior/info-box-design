@@ -7,6 +7,11 @@ if(closeBox){
 		Velocity(target, "slideUp", {duration: 200, easing:"ease-in-out"});
 		Velocity(showBox, {opacity: 1}, {display: "block", duration:200, delay:210 });
 	};
+
+	for(var i = 0; i < closeBox.length; i++){
+		closeBox[i].addEventListener("click", closeInfoBox, false);
+	};
+
 };
 
 if(showBox){
@@ -15,12 +20,10 @@ if(showBox){
 		Velocity(showBox, "slideDown", { opacity: 0, display: "none", duration:1});
 		Velocity(target, "slideDown", {duration: 250, easing:"ease-in-out"});
 	};
+
+
+	for(var i = 0; i < showBox.length; i++){
+		showBox[i].addEventListener("click", showInfoBox, false);
+	}
 };
-
-for(var i = 0; i < closeBox.length; i++){
-	closeBox[i].addEventListener("click", closeInfoBox, false);
-}
-
-for(var i = 0; i < showBox.length; i++){
-	showBox[i].addEventListener("click", showInfoBox, false);
-}	
+	
