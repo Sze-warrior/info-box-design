@@ -11,6 +11,7 @@
 	font-size: 22px;
 	margin-top: 0;
 	margin-bottom: $padding-default/2;
+	max-width: 80%;
 }
 
 .info-box-message{
@@ -27,7 +28,7 @@
 .close-icon-container{
 	position: absolute;
     right: 30px;
-    top: 22px;
+    top: 20px;
     @include transition(0.2s);
     border-bottom: 0px solid transparent;
     padding-bottom: 2px;
@@ -37,18 +38,14 @@
     &:focus,
     &:active {
 		@include transition(0.2s);
-		border-bottom: 1px solid red;
     	outline: none;
     	cursor: pointer;
-    	padding-bottom: 0;
 
 		.close-text{
 			color: red;
 		}
 
 		.close-icon{
-			padding-bottom: 0;
-
 			.cross-1, .cross-2{
 				background-color: red;
 			}
@@ -87,8 +84,16 @@
 	}
 }
 
-.hide{
+.show-info{
 	display: none;
+	text-align: right;
+    @include transition(0.2s);
+
+	&:hover{
+	    @include transition(0.2s);
+		cursor: pointer;
+		color: red;		
+	}
 }
 
 @media screen and (max-width: $mobile){
@@ -98,6 +103,7 @@
 
 	.info-box-header{
 		text-align: center;
+		max-width: 100%;
 	}
 
 	.close-icon-container{
