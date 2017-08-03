@@ -3,8 +3,24 @@
 .info-box-container{
 	border: 1px solid lighten($gray-base, 30%);
   	@include border-radius();
+  	margin-top: 10px;
+
+  	&.no-border{
+  		border: none;
+  	}
+}
+
+.info-box{
   	padding: $padding-default/2;
   	position: relative;
+
+  	&.hide{
+  		display: none;
+  	}
+
+  	&.show{
+  		display: block;
+  	}
 }
 
 .info-box-header{
@@ -14,7 +30,7 @@
 	max-width: 80%;
 }
 
-.info-box-message{
+.message{
 	p{
 		margin-top: 0;
 		margin-bottom: 15px;
@@ -25,7 +41,7 @@
 	}
 }
 
-.close-icon-container{
+.cross-icon-container{
 	position: absolute;
     right: 30px;
     top: 20px;
@@ -84,10 +100,14 @@
 	}
 }
 
-.show-info{
+.show-info-box{
 	display: none;
 	text-align: right;
     @include transition(0.2s);
+
+  	&.show{
+  		display: block;
+  	}
 
 	&:hover{
 	    @include transition(0.2s);
@@ -98,7 +118,12 @@
 
 @media screen and (max-width: $mobile){
 	.info-box-container{
-		padding: 60px 15px 30px;
+		padding: 40px 15px 30px;
+
+		&.no-border{
+			padding-top: 10px;
+			padding-bottom: 0;
+		}
 	}
 
 	.info-box-header{
@@ -106,8 +131,13 @@
 		max-width: 100%;
 	}
 
-	.close-icon-container{
+	.close-icon{
 		top: 20px;
 		right: 15px;
-	}		
+	}	
+
+	.cross-icon-container{
+		right: 0px;
+    	top: -20px;
+	}	
 }
