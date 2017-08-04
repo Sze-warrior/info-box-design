@@ -37,10 +37,6 @@ p {
   display: none;
   border: none; }
 
-.info-box.show {
-  display: block;
-  border: 1px solid #737373; }
-
 .info-box:hover {
   cursor: pointer; }
 
@@ -132,7 +128,9 @@ p {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
-  transition: 0.2s; }
+  transition: 0.2s;
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
 .show-info-box.show {
   display: block; }
