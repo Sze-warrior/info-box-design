@@ -1,25 +1,24 @@
 @import "../mixins/mixins";
 
-.info-box-container{
+.info-box{
+  	padding: $padding-default/2;
+  	position: relative;
 	border: 1px solid lighten($gray-base, 30%);
   	@include border-radius();
   	margin-top: 10px;
 
-  	&.no-border{
-  		border: none;
-  	}
-}
-
-.info-box{
-  	padding: $padding-default/2;
-  	position: relative;
-
   	&.hide{
   		display: none;
+  		border: none;
   	}
 
   	&.show{
   		display: block;
+		border: 1px solid lighten($gray-base, 30%);
+  	}
+
+  	&:hover{
+  		cursor: pointer;
   	}
 }
 
@@ -44,7 +43,7 @@
 .cross-icon-container{
 	position: absolute;
     right: 30px;
-    top: 20px;
+    top: 25px;
     @include transition(0.2s);
     border-bottom: 0px solid transparent;
     padding-bottom: 2px;
@@ -117,13 +116,9 @@
 }
 
 @media screen and (max-width: $mobile){
-	.info-box-container{
-		padding: 40px 15px 30px;
 
-		&.no-border{
-			padding-top: 10px;
-			padding-bottom: 0;
-		}
+	.info-box{
+		padding-top: 40px;
 	}
 
 	.info-box-header{
@@ -137,7 +132,7 @@
 	}	
 
 	.cross-icon-container{
-		right: 0px;
-    	top: -20px;
+		right: 15px;
+    	top: 15px;
 	}	
 }
