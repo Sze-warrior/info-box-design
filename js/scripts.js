@@ -1,12 +1,12 @@
 var closeInfoBox = document.querySelectorAll(".info-box");
 var showMore = document.querySelectorAll(".show-info-box");
 
+
 if(closeInfoBox || showMore){
 
 	function closeBox(e){
 		var target = e.currentTarget;//selects current target as the cross icon clicked
-		var targetParent = target.parentNode;
-		var openInfoBox = targetParent.children[0];
+		var openInfoBox = target.parentNode.children[1];
 
 		target.classList.add("hide");
 		openInfoBox.classList.add("show");
@@ -14,8 +14,7 @@ if(closeInfoBox || showMore){
 
 	function showInfoBox(e){
 		var target = e.currentTarget;//selects current target as the show me more link clicked
-		var targetParent = target.parentNode;
-		var openInfoBox = targetParent.children[1];
+		var openInfoBox = target.parentNode.children[0];
 
 		openInfoBox.classList.remove("hide");
 		target.classList.remove("show");
